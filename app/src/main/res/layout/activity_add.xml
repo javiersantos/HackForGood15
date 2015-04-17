@@ -22,7 +22,7 @@
                 android:layout_below="@id/toolbar">
                 <android.support.v7.widget.CardView
                     android:layout_width="fill_parent"
-                    android:layout_height="160dp"
+                    android:layout_height="800dp"
                     android:layout_gravity="center_horizontal"
                     card_view:cardCornerRadius="0dp">
                     <RelativeLayout
@@ -39,87 +39,93 @@
                             android:focusable="true"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
-                            android:textSize="40sp"
-                            android:text="La Sureña"
-                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            android:text="Título del evento"
+                            android:textColor="@color/pink"
                             android:layout_marginLeft="30dp" />
-                        <TextView
+                        <AutoCompleteTextView
+                            android:id="@+id/autocomplete_title"
+                            android:inputType="textMultiLine"
+                            android:scrollbars="vertical"
+                            android:lines="2"
                             android:gravity="left"
                             android:focusable="true"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
+                            android:layout_width="300dp"
+                            android:layout_height="70dp"
                             android:textSize="26sp"
-                            android:text="Avda. Reina Mercedes - ETSII"
+                            android:hint="¿Qué te gustaría hacer?"
                             android:fontFamily="sans-serif-thin"
+                            android:backgroundTint="@color/text"
                             android:textColor="@color/text"
+                            android:textColorHint="@color/text"
                             android:layout_marginLeft="30dp"
-                            android:layout_marginTop="50dp"/>
+                            android:layout_marginTop="20dp"/>
                         <TextView
                             android:gravity="left"
                             android:focusable="true"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
-                            android:textSize="20sp"
-                            android:text="Quedan 58 minutos. ¡Rápido!"
-                            android:fontFamily="sans-serif-thin"
-                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            android:text="Descripción"
+                            android:textColor="@color/pink"
                             android:layout_marginLeft="30dp"
-                            android:layout_marginTop="80dp"/>
-                        <TextView
+                            android:layout_marginTop="100dp" />
+                        <EditText
+                            android:inputType="textMultiLine"
+                            android:scrollbars="vertical"
+                            android:lines="2"
                             android:gravity="left"
                             android:focusable="true"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:textSize="26sp"
-                            android:text="4"
-                            android:fontFamily="sans-serif-condensed"
-                            android:drawableLeft="@android:drawable/ic_menu_myplaces"
-                            android:textColor="@color/text"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="110dp"/>
-                        <TextView
-                            android:gravity="right"
-                            android:focusable="true"
-                            android:clickable="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="35dp"
+                            android:layout_width="300dp"
+                            android:layout_height="70dp"
                             android:textSize="18sp"
-                            android:text="Promocionado"
+                            android:hint="Un buen plan siempre tiene una buena descripción..."
                             android:fontFamily="sans-serif-thin"
-                            android:drawableRight="@android:drawable/ic_menu_mylocation"
+                            android:backgroundTint="@color/text"
                             android:textColor="@color/text"
-                            android:layout_marginRight="3dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true" />
+                            android:textColorHint="@color/text"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="120dp"/>
+                        <TextView
+                            android:gravity="left"
+                            android:focusable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:text="Lugar"
+                            android:textColor="@color/pink"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="220dp" />
+                        <AutoCompleteTextView
+                            android:id="@+id/autocomplete_place"
+                            android:inputType="textMultiLine"
+                            android:scrollbars="vertical"
+                            android:lines="2"
+                            android:gravity="left"
+                            android:focusable="true"
+                            android:layout_width="300dp"
+                            android:layout_height="70dp"
+                            android:textSize="18sp"
+                            android:hint="¡Asegúrate! No queremos ir a donde no es..."
+                            android:fontFamily="sans-serif-thin"
+                            android:backgroundTint="@color/text"
+                            android:textColor="@color/text"
+                            android:textColorHint="@color/text"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="240dp"/>
                     </RelativeLayout>
-                    <com.melnykov.fab.FloatingActionButton
-                        android:id="@+id/fabJoin"
-                        android:onClick="joinPlan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|right"
-                        android:layout_margin="16dp"
-                        android:src="@android:drawable/ic_menu_view"
-                        fab:fab_colorNormal="@color/pink"
-                        fab:fab_colorPressed="@color/pinkDark" />
                 </android.support.v7.widget.CardView>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:scaleType="centerCrop"
-                    android:background="@drawable/reinamercedes_maps"
-                    android:layout_centerInParent="true" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/fab"
-        android:onClick="shareIntent"
+        android:onClick="saveEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
-        android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
+        android:src="@android:drawable/ic_menu_save"
         fab:fab_colorNormal="@color/pink"
         fab:fab_colorPressed="@color/pinkDark" />
 </FrameLayout>

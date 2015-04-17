@@ -2,6 +2,7 @@ package com.socialplans.socialplans;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -14,6 +15,8 @@ import com.melnykov.fab.FloatingActionButton;
 
 public class MainActivity extends ActionBarActivity {
 
+    SwipeRefreshLayout mSwipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +27,7 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setTitle(R.string.app_name);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.activity_main_swipe_refresh_layout);
 
     }
 
@@ -31,9 +35,8 @@ public class MainActivity extends ActionBarActivity {
         startActivity(new Intent(this, DetailActivity.class));
     }
 
-    public void refreshContent(View v) {
-        Toast toast1 = Toast.makeText(getApplicationContext(), "Comprobando nuevos planes...", Toast.LENGTH_SHORT);
-        toast1.show();
+    public void addPlan(View v) {
+        startActivity(new Intent(this, AddActivity.class));
     }
 
     @Override
@@ -51,6 +54,9 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.action_addEvent) {
+            startActivity(new Intent(this, AddActivity.class));
+        }
         if (id == R.id.action_settings) {
             return true;
         }

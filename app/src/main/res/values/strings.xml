@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">SocialPlans</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="action_addevent">Add Event</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="title_array">
+        <item>Tomar unas cervezas</item>
+        <item>Tomar unas tapas</item>
+        <item>Ir al campo del Betis</item>
+        <item>Ir al campo del Sevilla</item>
+        <item>Ir de compras</item>
+        <item>Estudiar en la biblioteca</item>
+        <item>Relax en el parque</item>
+        <item>Merendar en el Starbucks - Patrocinado -</item>
+    </string-array>
+    <string-array name="places_array">
+        <item>Reina Mercedes, Sevilla</item>
+        <item>Viapol, Sevilla</item>
+        <item>Cartuja, Sevilla</item>
+    </string-array>
 </resources>
