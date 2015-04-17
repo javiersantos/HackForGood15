@@ -61,9 +61,7 @@ public class DetailActivity extends ActionBarActivity {
         if (id == R.id.action_addEvent) {
             startActivity(new Intent(this, AddActivity.class));
         }
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
