@@ -1,10 +1,13 @@
 package com.socialplans.socialplans;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 
@@ -13,16 +16,32 @@ public class DetailActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_detail);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.app_name);
+        getSupportActionBar().setTitle("Más detalles");
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fabJoin = (FloatingActionButton) findViewById(R.id.fabJoin);
 
     }
 
+    public void shareIntent(View v) {
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "¿Te apuntas al evento \"¿Un trago?\" usando SocialPlans?";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Usando SocialPlans para organizar mis planes.");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
+
+    public void joinPlan(View v) {
+        Toast toast1 = Toast.makeText(getApplicationContext(), "¡Te acabas de unir al plan!", Toast.LENGTH_SHORT);
+        toast1.show();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

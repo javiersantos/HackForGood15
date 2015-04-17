@@ -1,13 +1,13 @@
 package com.socialplans.socialplans;
 
-import android.app.ActionBar;
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ScrollView;
+import android.view.View;
+import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 
@@ -27,6 +27,14 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    public void goBeer(View v) {
+        startActivity(new Intent(this, DetailActivity.class));
+    }
+
+    public void refreshContent(View v) {
+        Toast toast1 = Toast.makeText(getApplicationContext(), "Comprobando nuevos planes...", Toast.LENGTH_SHORT);
+        toast1.show();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -1,0 +1,95 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".DetailActivity">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/toolbar">
+                <android.support.v7.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    card_view:cardCornerRadius="0dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="@color/primary"
+                            android:layout_centerInParent="true" />
+                        <TextView
+                            android:gravity="left"
+                            android:focusable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="40sp"
+                            android:text="La Sureña"
+                            android:textColor="@color/text"
+                            android:layout_marginLeft="30dp" />
+                        <TextView
+                            android:gravity="left"
+                            android:focusable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="26sp"
+                            android:text="Avda. Reina Mercedes - ETSII"
+                            android:fontFamily="sans-serif-thin"
+                            android:textColor="@color/text"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="50dp"/>
+                        <TextView
+                            android:gravity="left"
+                            android:focusable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="26sp"
+                            android:text="4"
+                            android:fontFamily="sans-serif-condensed"
+                            android:drawableLeft="@android:drawable/ic_menu_myplaces"
+                            android:textColor="@color/text"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="100dp"/>
+                    </RelativeLayout>
+                    <com.melnykov.fab.FloatingActionButton
+                        android:id="@+id/fabJoin"
+                        android:onClick="joinPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
+                        fab:fab_colorNormal="@color/primary"
+                        fab:fab_colorPressed="@color/primaryDark" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:onClick="shareIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
+        fab:fab_colorNormal="@color/primary"
+        fab:fab_colorPressed="@color/primaryDark" />
+</FrameLayout>
+

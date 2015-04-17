@@ -24,6 +24,7 @@
                 android:layout_below="@id/toolbar"
                 >
                 <android.support.v7.widget.CardView
+                    android:onClick="goBeer"
                     android:layout_width="fill_parent"
                     android:layout_height="200dp"
                     android:layout_marginLeft="10dp"
@@ -40,6 +41,7 @@
                             android:src="@drawable/beers"
                             android:layout_centerInParent="true" />
                         <TextView
+                            android:onClick="goBeer"
                             android:gravity="center"
                             android:background="#a4c639"
                             android:focusable="true"
@@ -49,7 +51,21 @@
                             android:textSize="24sp"
                             android:text="¿Un trago?"
                             android:layout_centerInParent="true"
-                            android:textColor="@color/text" />
+                            android:textColor="@color/text"
+                            android:id="@+id/textView" />
+                        <TextView
+                            android:gravity="right"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:textSize="24sp"
+                            android:text="4"
+                            android:drawableRight="@android:drawable/ic_menu_myplaces"
+                            android:textColor="@color/text"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="3dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
@@ -81,6 +97,19 @@
                             android:text="¿Vamos de compras?"
                             android:layout_centerInParent="true"
                             android:textColor="@color/text" />
+                        <TextView
+                            android:gravity="right"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:textSize="24sp"
+                            android:text="7"
+                            android:drawableRight="@android:drawable/ic_menu_myplaces"
+                            android:textColor="@color/text"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="3dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
@@ -112,6 +141,19 @@
                             android:text="¿Un partido de fútbol?"
                             android:layout_centerInParent="true"
                             android:textColor="@color/text" />
+                        <TextView
+                            android:gravity="right"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:textSize="24sp"
+                            android:text="2"
+                            android:drawableRight="@android:drawable/ic_menu_myplaces"
+                            android:textColor="@color/text"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="3dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
@@ -143,6 +185,19 @@
                             android:text="¡Vayamos a comer!"
                             android:layout_centerInParent="true"
                             android:textColor="@color/text" />
+                        <TextView
+                            android:gravity="right"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:textSize="24sp"
+                            android:text="1"
+                            android:drawableRight="@android:drawable/ic_menu_myplaces"
+                            android:textColor="@color/text"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="3dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
@@ -150,6 +205,7 @@
     </LinearLayout>
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/fab"
+        android:onClick="refreshContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
