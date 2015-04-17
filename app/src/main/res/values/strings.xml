@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SocialPlans</string>
 
-    <string name="action_addevent">Añadir Evento</string>
+    <string name="action_filterevent">Filtrar evento</string>
     <string name="action_settings">Ajustes</string>
 
     <string-array name="title_array">
