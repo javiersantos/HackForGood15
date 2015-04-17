@@ -1,6 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.v4.widget.SwipeRefreshLayout
@@ -20,7 +20,6 @@
             android:id="@+id/scrollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             tools:context=".MainActivity">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,6 +34,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_gravity="center_horizontal"
+                    card_view:cardUseCompatPadding="true"
                     card_view:cardCornerRadius="5dp">
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -55,9 +55,11 @@
                             android:layout_height="35dp"
                             android:textSize="24sp"
                             android:text="¿Un trago?"
-                            android:layout_centerInParent="true"
                             android:textColor="@color/text"
-                            android:id="@+id/textView" />
+                            android:id="@+id/textView"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="bottom|left" />
                         <TextView
                             android:gravity="right"
                             android:focusable="true"
@@ -70,7 +72,8 @@
                             android:textColor="@color/text"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginRight="3dp" />
+                            android:layout_marginRight="3dp"
+                            android:id="@+id/textView2" />
                         <TextView
                             android:gravity="right"
                             android:focusable="true"
@@ -93,7 +96,6 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_gravity="center_horizontal"
-                    card_view:cardBackgroundColor="@color/primary"
                     card_view:cardUseCompatPadding="true"
                     card_view:cardCornerRadius="5dp">
                     <RelativeLayout
@@ -114,8 +116,9 @@
                             android:layout_height="35dp"
                             android:textSize="24sp"
                             android:text="¿Vamos de compras?"
-                            android:layout_centerInParent="true"
-                            android:textColor="@color/text" />
+                            android:textColor="@color/text"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true" />
                         <TextView
                             android:gravity="right"
                             android:focusable="true"
@@ -137,7 +140,6 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_gravity="center_horizontal"
-                    card_view:cardBackgroundColor="@color/primary"
                     card_view:cardUseCompatPadding="true"
                     card_view:cardCornerRadius="5dp">
                     <RelativeLayout
@@ -158,8 +160,9 @@
                             android:layout_height="35dp"
                             android:textSize="24sp"
                             android:text="¿Un partido de fútbol?"
-                            android:layout_centerInParent="true"
-                            android:textColor="@color/text" />
+                            android:textColor="@color/text"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true" />
                         <TextView
                             android:gravity="right"
                             android:focusable="true"
@@ -181,7 +184,6 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_gravity="center_horizontal"
-                    card_view:cardBackgroundColor="@color/primary"
                     card_view:cardUseCompatPadding="true"
                     card_view:cardCornerRadius="5dp">
                     <RelativeLayout
@@ -202,8 +204,9 @@
                             android:layout_height="35dp"
                             android:textSize="24sp"
                             android:text="¡Vayamos a comer!"
-                            android:layout_centerInParent="true"
-                            android:textColor="@color/text" />
+                            android:textColor="@color/text"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true" />
                         <TextView
                             android:gravity="right"
                             android:focusable="true"
