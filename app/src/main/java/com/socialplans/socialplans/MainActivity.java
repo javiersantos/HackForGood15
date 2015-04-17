@@ -29,6 +29,8 @@ public class MainActivity extends ActionBarActivity {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.activity_main_swipe_refresh_layout);
 
+
+
     }
 
     public void goBeer(View v) {
