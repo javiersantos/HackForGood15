@@ -2,123 +2,131 @@
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include android:id="@+id/toolbar" layout="@layout/toolbar" />
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:fab="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/scrollview"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-        <LinearLayout
+        android:orientation="vertical">
+        <include android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:fab="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scrollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="70dp">
-            <android.support.v7.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="center_horizontal"
-                card_view:cardCornerRadius="5dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
+            android:layout_marginTop="5dp"
+            tools:context=".MainActivity">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/toolbar"
+                >
+                <android.support.v7.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal"
+                    card_view:cardCornerRadius="5dp">
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/beers"
-                        android:layout_centerInParent="true" />
-                    <TextView
-                        android:gravity="center"
-                        android:background="#a4c639"
-                        android:focusable="true"
-                        android:clickable="true"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/beers"
+                            android:layout_centerInParent="true" />
+                        <TextView
+                            android:gravity="center"
+                            android:background="#a4c639"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textSize="24sp"
+                            android:text="¿Un trago?"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal"
+                    card_view:cardBackgroundColor="@color/primary"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardCornerRadius="5dp">
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:textSize="24sp"
-                        android:text="¿Una cerveza?"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/text" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="center_horizontal"
-                card_view:cardBackgroundColor="@color/primary"
-                card_view:cardUseCompatPadding="true"
-                card_view:cardCornerRadius="5dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/shopping"
+                            android:layout_centerInParent="true" />
+                        <TextView
+                            android:gravity="center"
+                            android:background="#229CDC"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textSize="24sp"
+                            android:text="¿Vamos de compras?"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal"
+                    card_view:cardBackgroundColor="@color/primary"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardCornerRadius="5dp">
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/shopping"
-                        android:layout_centerInParent="true" />
-                    <TextView
-                        android:gravity="center"
-                        android:background="#229CDC"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:textSize="24sp"
-                        android:text="¿Vamos de compras?"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/text" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="center_horizontal"
-                card_view:cardBackgroundColor="@color/primary"
-                card_view:cardUseCompatPadding="true"
-                card_view:cardCornerRadius="5dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/football"
-                        android:layout_centerInParent="true" />
-                    <TextView
-                        android:gravity="center"
-                        android:background="#FFCE49"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:textSize="24sp"
-                        android:text="¿Un partido de fútbol?"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/text" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="center_horizontal"
-                card_view:cardBackgroundColor="@color/primary"
-                card_view:cardUseCompatPadding="true"
-                card_view:cardCornerRadius="5dp">
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-    </ScrollView>
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/football"
+                            android:layout_centerInParent="true" />
+                        <TextView
+                            android:gravity="center"
+                            android:background="#FFCE49"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textSize="24sp"
+                            android:text="¿Un partido de fútbol?"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal"
+                    card_view:cardBackgroundColor="@color/primary"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardCornerRadius="5dp">
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
