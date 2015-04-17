@@ -6,6 +6,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ScrollView;
+
+import com.melnykov.fab.FloatingActionButton;
 
 
 public class MainActivity extends Activity {
@@ -15,6 +18,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ScrollView sv = (ScrollView) findViewById(R.id.scrollview);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
     }
 
