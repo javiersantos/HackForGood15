@@ -211,7 +211,7 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
         android:src="@mipmap/ic_refresh"
-        fab:fab_colorNormal="@color/primary"
-        fab:fab_colorPressed="@color/primaryDark" />
+        fab:fab_colorNormal="@color/pink"
+        fab:fab_colorPressed="@color/pinkDark" />
 </FrameLayout>
 

@@ -74,9 +74,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|right"
                         android:layout_margin="16dp"
-                        android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
-                        fab:fab_colorNormal="@color/primary"
-                        fab:fab_colorPressed="@color/primaryDark" />
+                        android:src="@android:drawable/ic_menu_view"
+                        fab:fab_colorNormal="@color/pink"
+                        fab:fab_colorPressed="@color/pinkDark" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
         </ScrollView>
@@ -89,7 +89,7 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
         android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
-        fab:fab_colorNormal="@color/primary"
-        fab:fab_colorPressed="@color/primaryDark" />
+        fab:fab_colorNormal="@color/pink"
+        fab:fab_colorPressed="@color/pinkDark" />
 </FrameLayout>
 
