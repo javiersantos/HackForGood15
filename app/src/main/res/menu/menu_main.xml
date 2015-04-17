@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
     <item android:id="@+id/action_addEvent"
-        android:title="@string/action_addevent"
+        android:title="@string/action_filterevent"
         app:showAsAction="ifRoom" />
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
