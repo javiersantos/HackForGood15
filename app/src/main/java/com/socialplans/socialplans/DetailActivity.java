@@ -1,6 +1,7 @@
 package com.socialplans.socialplans;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -29,7 +30,7 @@ public class DetailActivity extends ActionBarActivity {
 
     }
 
-    public void shareIntent(View v) {
+    public void shareIntent() {
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         String shareBody = "¿Te apuntas al evento \"¿Un trago?\" usando SocialPlans?";
@@ -43,10 +44,14 @@ public class DetailActivity extends ActionBarActivity {
         toast1.show();
     }
 
+    public void goChat(View v){
+        startActivity(new Intent(getApplicationContext(),ChatActivity.class));
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_details, menu);
         return true;
     }
 
@@ -58,9 +63,15 @@ public class DetailActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_addEvent) {
-            startActivity(new Intent(this, AddActivity.class));
+        if (id == R.id.action_share) {
+            shareIntent();
         }
+        if (id==R.id.action_map){
+            String geoUri = "https://www.google.es/maps/place/Mercado+Provenzal+Reina+Mercedes/@37.36147,-5.985952,17z/data=!3m1!4b1!4m7!1m4!3m3!1s0xd126c2b0091f64b:0x5ca945334655b689!2sMercado+Provenzal+Reina+Mercedes!3b1!3m1!1s0xd126c2b0091f64b:0x5ca945334655b689";
+            Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(geoUri));
+            startActivity(intent);
+        }
+
 
 
         return super.onOptionsItemSelected(item);

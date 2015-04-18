@@ -4,6 +4,9 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
@@ -69,8 +72,8 @@ public class MainActivity extends ActionBarActivity {
             NotificationCompat.Builder mBuilder =
                     new NotificationCompat.Builder(this)
                             .setSmallIcon(R.drawable.abc_ic_search_api_mtrl_alpha)
-                            .setContentTitle("My notification")
-                            .setContentText("Hello World!");
+                            .setContentTitle("SocialPlans")
+                            .setContentText("¡Existe un nuevo evento cerca de ti!");
 
             // Creates an explicit intent for an Activity in your app
             Intent resultIntent = new Intent(this, DetailActivity.class);
@@ -94,6 +97,13 @@ public class MainActivity extends ActionBarActivity {
             NotificationManager mNotificationManager =
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             mNotificationManager.notify(1, mBuilder.build());
+            try {
+                Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+                r.play();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             return true;
         }
 

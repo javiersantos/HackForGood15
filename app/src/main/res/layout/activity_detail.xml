@@ -5,7 +5,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/primary">
         <include android:id="@+id/toolbar"
             layout="@layout/toolbar" />
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20,6 +21,15 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_below="@id/toolbar">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/beers"
+                    android:layout_centerInParent="true" />
+
                 <android.support.v7.widget.CardView
                     android:layout_width="fill_parent"
                     android:layout_height="160dp"
@@ -33,16 +43,18 @@
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
                             android:background="@color/primary"
-                            android:layout_centerInParent="true" />
+                            android:layout_centerInParent="true"/>
                         <TextView
                             android:gravity="left"
                             android:focusable="true"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:textSize="40sp"
-                            android:text="La Sureña"
+                            android:text="Provenzal"
                             android:textColor="@color/text"
-                            android:layout_marginLeft="30dp" />
+                            android:layout_marginLeft="15dp"
+                            android:layout_toStartOf="@+id/textView3"
+                            android:layout_marginTop="10dp" />
                         <TextView
                             android:gravity="left"
                             android:focusable="true"
@@ -52,8 +64,10 @@
                             android:text="Avda. Reina Mercedes - ETSII"
                             android:fontFamily="sans-serif-thin"
                             android:textColor="@color/text"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="50dp"/>
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="70dp"
+                            android:layout_alignEnd="@+id/textView3"
+                            android:layout_marginRight="15dp" />
                         <TextView
                             android:gravity="left"
                             android:focusable="true"
@@ -63,10 +77,10 @@
                             android:text="Quedan 58 minutos. ¡Rápido!"
                             android:fontFamily="sans-serif-thin"
                             android:textColor="@color/text"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="80dp"/>
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="100dp"
+                            android:layout_marginRight="15dp" />
                         <TextView
-                            android:gravity="left"
                             android:focusable="true"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
@@ -75,8 +89,9 @@
                             android:fontFamily="sans-serif-condensed"
                             android:drawableLeft="@android:drawable/ic_menu_myplaces"
                             android:textColor="@color/text"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="110dp"/>
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="130dp"
+                            android:layout_alignParentEnd="true" />
                         <TextView
                             android:gravity="right"
                             android:focusable="true"
@@ -90,36 +105,33 @@
                             android:textColor="@color/text"
                             android:layout_marginRight="3dp"
                             android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true" />
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/textView3"
+                            android:layout_marginTop="10dp" />
                     </RelativeLayout>
-                    <com.melnykov.fab.FloatingActionButton
-                        android:id="@+id/fabJoin"
-                        android:onClick="joinPlan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|right"
-                        android:layout_margin="16dp"
-                        android:src="@android:drawable/ic_menu_view"
-                        fab:fab_colorNormal="@color/pink"
-                        fab:fab_colorPressed="@color/pinkDark" />
                 </android.support.v7.widget.CardView>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:scaleType="centerCrop"
-                    android:background="@drawable/reinamercedes_maps"
-                    android:layout_centerInParent="true" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/fab"
-        android:onClick="shareIntent"
+        android:onClick="goChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_dialog_email"
+        fab:fab_colorNormal="@color/pink"
+        fab:fab_colorPressed="@color/pinkDark" />
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fabJoin"
+        android:onClick="joinPlan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
-        android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
+        android:src="@android:drawable/ic_menu_view"
         fab:fab_colorNormal="@color/pink"
         fab:fab_colorPressed="@color/pinkDark" />
 </FrameLayout>

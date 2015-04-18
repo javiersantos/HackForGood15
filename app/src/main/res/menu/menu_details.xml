@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailActivity">
+    <item android:id="@+id/action_share"
+        android:title="Compartir..."
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_map"
+        android:title=""
+        android:icon="@android:drawable/ic_dialog_map"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>
