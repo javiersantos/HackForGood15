@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    tools:context = "com.cervezaya.cervezaya.activities.ActivityLogin">
+
+    <ImageView
+        android:id = "@+id/ivBacground"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "@color/primary"
+        android:contentDescription = "@null"
+        android:scaleType = "centerCrop" />
+
+    <RelativeLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:fitsSystemWindows = "true"
+        android:background="#63B3FF">
+
+        <TextView
+            android:id = "@+id/tvLoginFacebook"
+            android:layout_width = "match_parent"
+            android:layout_height = "68dp"
+            android:layout_above = "@+id/tvLoginTwitter"
+            android:layout_margin = "16dp"
+            android:background = "@drawable/drawable_facebook_roundedcorners"
+            android:drawableLeft = "@drawable/ic_facebook_login"
+            android:drawablePadding = "5dp"
+            android:drawableStart = "@drawable/ic_facebook_login"
+            android:gravity = "center"
+            android:padding = "15dp"
+            android:text = "Iniciar sesión con Facebook"
+            android:textColor = "@android:color/white"
+            android:textSize = "18sp"
+            fontPath="fonts/RobotoSlab-Bold.ttf"
+            tools:ignore="MissingPrefix"/>
+
+        <TextView
+            android:id = "@+id/tvLoginTwitter"
+            android:layout_width = "match_parent"
+            android:layout_height = "68dp"
+            android:layout_alignParentBottom = "true"
+            android:layout_marginBottom = "16dp"
+            android:layout_marginEnd = "16dp"
+            android:layout_marginLeft = "16dp"
+            android:layout_marginRight = "16dp"
+            android:layout_marginStart = "16dp"
+            android:background = "@drawable/drawable_google_roundedcorners"
+            android:drawableLeft = "@drawable/ic_twitter_login"
+            android:drawableStart = "@drawable/ic_twitter_login"
+            android:gravity = "center"
+            android:padding = "15dp"
+            android:text = "Iniciar sesión con Twitter"
+            android:textColor = "@android:color/white"
+            android:textSize = "18sp"
+            fontPath="fonts/RobotoSlab-Bold.ttf"
+            tools:ignore="MissingPrefix"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
