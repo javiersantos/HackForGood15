@@ -72,9 +72,9 @@
                             android:drawableRight="@android:drawable/ic_menu_myplaces"
                             android:textColor="@color/text"
                             android:layout_alignParentBottom="true"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginRight="3dp"
-                            android:id="@+id/textView2" />
+                            android:id="@+id/textView2"
+                            android:layout_alignParentEnd="true" />
                         <TextView
                             android:gravity="right"
                             android:focusable="true"
